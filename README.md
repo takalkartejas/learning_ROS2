@@ -22,10 +22,11 @@ This repository will explain basics of ROS2
 16. #1
 17. setup.py modified - inside 'console scripts': [ <node_name_to_display> = <package_name>.<python_file_name>:function"
 18. colcon build --symlink-install - this allows to change python file and see the results instantly without bulding everytime
-19. created a file called draw_turtle.py to publish to cmd_vel to move turtle sim
+19. created a file called draw_cycle.py to publish to cmd_vel to move turtle sim
 20. #1
 21. package.xml - added the geometry_msgs and turtlesim dependencies
-
+22. setup.py - added the node  draw_cycle
+23. again do colcon build --symlink-install
 
 
 ### Usefull commands
