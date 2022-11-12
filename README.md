@@ -18,4 +18,4 @@ This repository will explain basics of ROS2
 1. ros2 run - run nodes
 2. alias <variable_name> = " <command1>;<command2>" -  create easy access alias for multiple big commands, can add in bashrc
 3. ros2 - for ros2 help
- 
+4. ros2 pkg create <package_name> --build-type ament_python --dependencies rclpy - can use ament_cmake instead of ament_python 
