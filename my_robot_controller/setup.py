@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             "test_node = my_robot_controller.my_first_node:main",
-            "draw_cycle = my_robot_controller.draw_cycle:main"
+            "draw_cycle = my_robot_controller.draw_cycle:main",
+            "pose_subscriber = my_robot_controller.pose_subscriber:main"
         ],
     },
 )

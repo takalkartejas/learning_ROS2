@@ -28,6 +28,9 @@ This repository will explain basics of ROS2
 22. setup.py - added the node  draw_cycle
 23. again do colcon build --symlink-install
 24. created pose_subscriber.py to subscribe to pose topic of the turtlesim
+25. #1
+26. setup.py - added the node 
+24. colcon build
 
 
 ### Usefull commands

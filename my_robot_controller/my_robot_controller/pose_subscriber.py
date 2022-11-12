@@ -9,7 +9,7 @@ class PoseSubscriberNode(Node):
 
     def __init__(self):
         super().__init__("pose_subscriber")
-        self.pose_subscriber = self.create_subscription(Pose, "/turtle1/pose", self.pose_callback, 10 ) # 10 is a buffer
+        self.pose_subscriber = self.create_subscription(Pose, "/turtle1/pose", self.pose_callback, 10 ) # 10 is a buffer, Pose is a messegem /turtle1/pose is a topic
     
     def pose_callback(self, msg: Pose):    #msg is of type Pose
         self.get_logger().info(str(msg))
