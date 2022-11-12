@@ -1,6 +1,8 @@
 # learning_ROS2
 This repository will explain basics of ROS2 
 
+#### #1 check commits and comments to learn more about the code written inside files
+
 ### Steps taken
 1. Installed ros2 foxy by follwing the steps for debian
 2. sourced the foxy setup.bash in bashrc
@@ -17,6 +19,8 @@ This repository will explain basics of ROS2
 13. ros2 nodes are created inside the folder with same name as the parent folder
 14. Did a colcon build in ros2_ws directory - the same named folder showed up in install folder in the workspace
 15. create a pythonfile inside the same named foler and use chmod +x to make it executable
+16. check commits #5 to 
+
 
 
 ### Usefull commands

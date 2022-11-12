@@ -12,6 +12,7 @@ class MyNode(Node): #this class inherits from Node from rclpy.node, so that it c
 
 def main(args=None):  #arguments are set to none by default
     rclpy.init(args=args) #init the rclpy communication, args of init function are that we get from main
+    node = MyNode()   # we create the node here
 
 
     rclpy.shutdown() # shut down the rclpy communication
