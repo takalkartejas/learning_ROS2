@@ -9,6 +9,7 @@ class MyNode(Node): #this class inherits from Node from rclpy.node, so that it c
     def __init__(self):  #create a constructor
         super().__init__("first_node")   # the command - super calles the constructor of the upper class, we enter the nodes name inside bracketm
         #the above statement initiallizes the node
+        self.get_logger().info("hello from ROS2") # to print hello world
 
 def main(args=None):  #arguments are set to none by default
     rclpy.init(args=args) #init the rclpy communication, args of init function are that we get from main
