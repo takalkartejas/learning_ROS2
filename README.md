@@ -19,7 +19,10 @@ This repository will explain basics of ROS2
 13. ros2 nodes are created inside the folder with same name as the parent folder
 14. Did a colcon build in ros2_ws directory - the same named folder showed up in install folder in the workspace
 15. create a pythonfile inside the same named foler and use chmod +x to make it executable
-16. check commits #5 to 
+16. #1
+17. setup.py modified - inside 'console scripts': [ <node_name_to_display> = <package_name>.<python_file_name>:function"
+18. colcon build --symlink-install - this allows to change python file and see the results instantly without bulding everytime
+
 
 
 
