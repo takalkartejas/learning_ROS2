@@ -1,4 +1,5 @@
 #!usr/bin/env python3 
+
 #interpreter line to tell the interpreter to use python3
 
 import rclpy #similar to rospy
@@ -14,8 +15,7 @@ class MyNode(Node): #this class inherits from Node from rclpy.node, so that it c
 def main(args=None):  #arguments are set to none by default
     rclpy.init(args=args) #init the rclpy communication, args of init function are that we get from main
     node = MyNode()   # we create the node here
-
-
+    rclpy.spin(node) # to run continusly untill killed
     rclpy.shutdown() # shut down the rclpy communication
 
 if __name__ == '__main__':
