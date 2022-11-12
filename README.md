@@ -22,7 +22,9 @@ This repository will explain basics of ROS2
 16. #1
 17. setup.py modified - inside 'console scripts': [ <node_name_to_display> = <package_name>.<python_file_name>:function"
 18. colcon build --symlink-install - this allows to change python file and see the results instantly without bulding everytime
-
+19. created a file called draw_turtle.py to publish to cmd_vel to move turtle sim
+20. #1
+21. 
 
 
 
@@ -35,4 +37,4 @@ This repository will explain basics of ROS2
 6. ros2 topic info <topic>
 7. ros2 interface show <msg> - shows messege
 8. ros2 topic echo <topic>
-9.
+9. 
