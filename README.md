@@ -27,6 +27,7 @@ This repository will explain basics of ROS2
 21. package.xml - added the geometry_msgs and turtlesim dependencies
 22. setup.py - added the node  draw_cycle
 23. again do colcon build --symlink-install
+24. created pose_subscriber.py to subscribe to pose topic of the turtlesim
 
 
 ### Usefull commands
