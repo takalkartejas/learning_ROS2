@@ -12,6 +12,11 @@ This repository will explain basics of ROS2
 8. colcon build inside the ros2_ws directory
 9. checked the ros2 working using ros2 run demo_nodes_cpp lister and talker
 10. they share info through the topic chatter
+11. pcakage.xml contains the email and license of maintainer to publish the package on online repo
+12. package.xml mentions the dependency - eg. - rclpy and build-type - ament_python
+13. ros2 nodes are created inside the folder with same name as the parent folder
+14. Did a colcon build in ros2_ws directory - the same named folder showed up in install folder in the workspace
+15. create a pythonfile inside the same named foler and use chmod +x to make it executable
 
 
 ### Usefull commands
