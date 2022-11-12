@@ -3,15 +3,16 @@
 # refer my_first_node to understand the structure of the python file
 import rclpy
 from rclpy.node import Node
+from turtlesim.msg import Pose  # Type: turtlesim/msg/Pose
 
 class PoseSubscriberNode(Node):
 
     def __init__(self):
         super().__init__("pose_subscriber")
-        self.get_logger().info("draw circle")
-        self.timer_ = self.create_timer(0.5, self.send_velocity_callback)
-
-    def send_velocity_callback(self):
+        self.pose_subscriber = self.create_subscription(Pose, "/turtle1/pose", self.pose_callback, 10 ) # 10 is a buffer
+    
+    def pose_callback(self, msg: Pose):    #msg is of type Pose
+        self.get_logger().info(str(msg))
 
 def main(args=None):
     rclpy.init(args=args)
