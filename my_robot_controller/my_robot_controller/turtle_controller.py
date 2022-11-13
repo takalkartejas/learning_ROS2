@@ -14,7 +14,9 @@ class TurtleControllerNode(Node):
         self.create_timer(1,self.vel_publisher_callback)
 
     def pose_callback(self, pose: Pose):
-        self.get_logger().info(str(pose))
+        x = pose._x
+        y = pose._y
+        self.get_logger().info('x=' + str(x) + 'y=' + str(y))
 
     def vel_publisher_callback(self):
         msg = Twist()
