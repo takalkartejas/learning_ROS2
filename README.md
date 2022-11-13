@@ -36,6 +36,7 @@ This repository will explain basics of ROS2
 27. implemented the control system in turtle_controller
 28. ros2 service list
 29. ros2 service type - to see info
+30. created a service client for in the turtle_controller
 
 ### Usefull commands
 1. ros2 run <package_name> <node_name> :- run nodes
