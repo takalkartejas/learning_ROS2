@@ -22,22 +22,22 @@ class TurtleControllerNode(Node):
         #self.get_logger().info('x=' + str(self.x) + 'y=' + str(self.y))
         if self.x > 5.5 and self.previous_x_ <= 5.5:
             self.previous_x_ = pose.x
-            self.get_logger().log("set colour to red")
+            self.get_logger().info("set colour to red")
             self.call_set_pen_service(255,0,0,3,0)
         if self.x <=5.5 and self.previous_x_ > 5.5:
             self.previous_x_ = pose.x
-            self.get_logger().log("set colour to green")
+            self.get_logger().info("set colour to green")
             self.call_set_pen_service(0,255,0,3,0)
             
 
     def vel_publisher_callback(self):
         msg = Twist()
 
-        if self.x >9.0 or self.x < 1.0 or self.y > 9.0 or self.y < 1.0:
+        if self.x >9.0 or self.x < 2.0 or self.y > 9.0 or self.y < 2.0:
             msg.linear.x = 0.5
             msg.angular.z = 0.5
         else:
-            msg.linear.x = 0.5
+            msg.linear.x = 1
             msg.angular.z = 0.0
         self.vel_publisher.publish(msg)
 
