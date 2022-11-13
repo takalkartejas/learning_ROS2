@@ -3,6 +3,8 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
+from turtlesim.srv import SetPen
+from functools import partial
 
 class TurtleControllerNode(Node):
 
@@ -29,7 +31,26 @@ class TurtleControllerNode(Node):
             msg.angular.z = 0.0
         self.vel_publisher.publish(msg)
 
+    def call_set_pen_service(self,r,g,b,width,off):
+        client = self.create_client(SetPen, "/turtle1/set_pen")
+        while not client.wait_for_service(1.0):   #if no client for 1 sec
+            self.get_logger().warn("waiting for service...")  #then print this
 
+        request = SetPen.Request()
+        request.r = r
+        request.g = g
+        request.b = b
+        request.width = width
+        request.off = off
+
+        future  = client.call_async(request)   # we can call service asyncronasly, the node will not be blocked using a callback
+        future.add_done_callback(partial(self.callback_set_pen)) 
+
+    def callback_set_pen(self, future): #to call back when response is recieved from service
+        try:
+            response = future.result()
+        except Exception as err:
+            self.get_logger().error("service call failed %r" % (err,))
 
 def main(args=None):
     rclpy.init(args=args)

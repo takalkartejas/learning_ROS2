@@ -33,8 +33,9 @@ This repository will explain basics of ROS2
 24. colcon build
 25. created a program called turtle_controller to subscribe and publish at same time #1
 26. tested the program by drawing a small circle and displaying its output
-27.
-
+27. implemented the control system in turtle_controller
+28. ros2 service list
+29. ros2 service type - to see info
 
 ### Usefull commands
 1. ros2 run <package_name> <node_name> :- run nodes
