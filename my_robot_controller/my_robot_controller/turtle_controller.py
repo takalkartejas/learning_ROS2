@@ -14,14 +14,19 @@ class TurtleControllerNode(Node):
         self.create_timer(1,self.vel_publisher_callback)
 
     def pose_callback(self, pose: Pose):
-        x = pose._x
-        y = pose._y
-        self.get_logger().info('x=' + str(x) + 'y=' + str(y))
+        self.x = pose._x
+        self.y = pose._y
+        #self.get_logger().info('x=' + str(self.x) + 'y=' + str(self.y))
 
     def vel_publisher_callback(self):
         msg = Twist()
-        msg.linear.x = 0.1
-        msg.angular.z = 0.1
+
+        if self.x >9.0 or self.x < 1.0 or self.y > 9.0 or self.y < 1.0:
+            msg.linear.x = 0.5
+            msg.angular.z = 0.5
+        else:
+            msg.linear.x = 0.5
+            msg.angular.z = 0.0
         self.vel_publisher.publish(msg)
 
 

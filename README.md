@@ -31,6 +31,9 @@ This repository will explain basics of ROS2
 25. #1
 26. setup.py - added the node 
 24. colcon build
+25. created a program called turtle_controller to subscribe and publish at same time #1
+26. tested the program by drawing a small circle and displaying its output
+27.
 
 
 ### Usefull commands
