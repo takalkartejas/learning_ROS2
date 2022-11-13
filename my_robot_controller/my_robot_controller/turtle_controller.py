@@ -6,12 +6,12 @@ class TurtleControllerNode(Node):
 
     def __init__(self):
         super().__init__("turtle_controller")
-        self._logger().info("Turtle controller has been started")
+        self.get_logger().info("Turtle controller has been started")
 
 
 
 def main(args=None):
     rclpy.init(args=args)
     node = TurtleControllerNode()
-    rclpy.spin()
+    rclpy.spin(node)
     rclpy.shutdown()
