@@ -13,6 +13,7 @@ class PoseSubscriberNode(Node):
     
     def pose_callback(self, msg: Pose):    #msg is of type Pose
         self.get_logger().info(str(msg))
+        
 
 def main(args=None):
     rclpy.init(args=args)
